@@ -40,4 +40,4 @@ A simple page that display name, pod number, pod location, start and end time of
 - Please organise, and test your code as if they are production ready
 - Please host your source code in a public repository eg. Github or Bitbucket etc
 - You may choose host your application in your preferred server.
-- Provide a README.md with instructions on running the application locally
+- Provide a README.md with instructions on running the application locally
