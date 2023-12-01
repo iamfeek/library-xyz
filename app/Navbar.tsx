@@ -11,16 +11,15 @@ import { Fragment } from "react";
 const user = {
   name: "Tom Cook",
   email: "tom@example.com",
-  imageUrl:
-    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+  imageUrl: "https://ui-avatars.com/api/?background=random",
 };
-const navigation = [
+export const navigation = [
   { name: "Dashboard", href: "/" },
   { name: "Booking", href: "/booking" },
 ];
 const userNavigation = [
-  { name: "Your Profile", href: "#" },
-  { name: "Settings", href: "#" },
+  { name: "Your Profile", href: "/" },
+  { name: "Settings", href: "/booking" },
   { name: "Sign out", href: "#" },
 ];
 
@@ -33,21 +32,8 @@ export const Navbar = () => {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 justify-between">
               <div className="flex">
-                <div className="flex flex-shrink-0 items-center">
-                  <Image
-                    className="block h-8 w-auto lg:hidden"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                    alt="Your Company"
-                    width={15}
-                    height={8}
-                  />
-                  <Image
-                    className="hidden h-8 w-auto lg:block"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                    alt="Your Company"
-                    width={15}
-                    height={8}
-                  />
+                <div className="flex flex-shrink-0 items-center font-bold text-gray-800">
+                  Library XYZ
                 </div>
                 <div className="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
                   {navigation.map((item) => (
@@ -60,7 +46,7 @@ export const Navbar = () => {
                           : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700",
                         "inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium"
                       )}
-                      aria-current={item.current ? "page" : undefined}
+                      aria-current={pathname === item.href ? "page" : undefined}
                     >
                       {item.name}
                     </a>
@@ -105,16 +91,14 @@ export const Navbar = () => {
                       {userNavigation.map((item) => (
                         <Menu.Item key={item.name}>
                           {({ active }) => (
-                            <Link href={item.href} passHref>
-                              <a
-                                href={item.href}
-                                className={classNames(
-                                  active ? "bg-gray-100" : "",
-                                  "block px-4 py-2 text-sm text-gray-700"
-                                )}
-                              >
-                                {item.name}
-                              </a>
+                            <Link
+                              href={item.href}
+                              className={classNames(
+                                active ? "bg-gray-100" : "",
+                                "block px-4 py-2 text-sm text-gray-700"
+                              )}
+                            >
+                              {item.name}
                             </Link>
                           )}
                         </Menu.Item>
@@ -143,7 +127,7 @@ export const Navbar = () => {
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
-                  as="a"
+                  as={Link}
                   href={item.href}
                   className={classNames(
                     pathname === item.href
@@ -151,7 +135,7 @@ export const Navbar = () => {
                       : "border-transparent text-gray-600 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800",
                     "block border-l-4 py-2 pl-3 pr-4 text-base font-medium"
                   )}
-                  aria-current={item.current ? "page" : undefined}
+                  aria-current={pathname === item.href ? "page" : undefined}
                 >
                   {item.name}
                 </Disclosure.Button>
