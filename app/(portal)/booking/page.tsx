@@ -1,5 +1,7 @@
+"use client";
+
+import { PodBookingForm } from "./components/PodBookingForm";
+
 export default function BookingPage() {
-    return (
-        <strong>Booking page</strong>
-    )
+  return <PodBookingForm />;
 }
