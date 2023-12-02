@@ -95,8 +95,8 @@ export default function BookingAcknowledgementPage() {
   };
 
   return (
-    <div>
-      <div className="px-4 sm:px-0">
+    <div className="shadow-md rounded-lg">
+      <div className="pt-4 px-4 sm:px-0">
         <h3 className="text-base font-semibold leading-7 text-gray-900">
           Booking Information
         </h3>

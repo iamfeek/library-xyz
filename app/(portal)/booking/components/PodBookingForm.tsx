@@ -127,11 +127,12 @@ export const PodBookingForm = () => {
           }, 4000);
         });
       }}
+      className=""
     >
       {({ errors, touched, values, isValid, dirty, isSubmitting }) => {
         return (
           <Form>
-            <div className="grid grid-cols-1 gap-4">
+            <div className="grid grid-cols-1 gap-4 shadow-md rounded-lg px-4 py-6">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 <div>
                   <label
