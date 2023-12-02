@@ -23,10 +23,10 @@ export default function RootLayout({
         <div className="min-h-full">
           <Navbar />
 
-          <div className="py-10">
+          <div className="py-6 lg:py-10">
             <LayoutHeader />
             <main>
-              <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
+              <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 {children}
               </div>
             </main>
