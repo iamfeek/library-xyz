@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { navigation } from "./Navbar";
+import { navigation } from "./navbar";
 
 export const LayoutHeader = () => {
   const pathname = usePathname();
