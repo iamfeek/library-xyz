@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, it, expect, vi } from 'vitest';
-import { isTodayBookable } from './form-constants';
+import { isTodayBookable } from './form-validators';
 
 describe("isTodayBookable", () => {
     beforeEach(() => {

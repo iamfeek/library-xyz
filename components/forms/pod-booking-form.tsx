@@ -5,10 +5,12 @@ import {
   availableDurations,
   availablePods,
   availableTimings,
+} from "@/utils/form-constants";
+import {
   getMinutesTillClosing,
   getNextAvailableTimeslot,
   isTodayBookable,
-} from "@/utils/form-constants";
+} from "@/utils/form-validators";
 import { validateNRICFIN } from "@/utils/nric-validator";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { CalendarIcon, ReloadIcon } from "@radix-ui/react-icons";
