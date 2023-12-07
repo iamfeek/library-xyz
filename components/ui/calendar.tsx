@@ -6,7 +6,7 @@ import { DayPicker } from "react-day-picker";
 
 import { cn } from "@/utils";
 import { buttonVariants } from "@/components/ui/button";
-import { isTodayBookable } from "@/utils/form-constants";
+import { isTodayBookable } from "@/utils/form-validators";
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker>;
 
