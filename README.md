@@ -1,4 +1,4 @@
-# cognizant-fe
+# Library XYZ
 
 ## Running locally
 ### Live demo
