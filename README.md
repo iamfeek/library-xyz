@@ -1,5 +1,26 @@
 # cognizant-fe
 
+## Running locally
+### Live demo
+https://library-xyz.fiq.me
+
+### Install dependencies 
+`npm run install`
+
+### Running the project
+`npm run dev`
+
+### Testing the project
+`npm run test`
+
+### Building the project
+`npm run build` will produce a `dist` folder that has the compiled code.
+
+## Deployment Information
+This project is deployed to Vercel and has automatic production deployments on pushes to the `main` branch.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fiamfeek%2Flibrary-xyz)
+
 ## Requirements
 
 ### Background
@@ -33,10 +54,7 @@ A simple page that display name, pod number, pod location, start and end time of
 
 ### Technical Specs
 
-- You may leverage on a framework of your choice (React preferred)
-- You may design your own UI/UX
 - You are expected to implement validations for the fields based on the business requirements
-- You may implement the field validations using any available libraries e.g yup
 - Please organise, and test your code as if they are production ready
 - Please host your source code in a public repository eg. Github or Bitbucket etc
 - You may choose host your application in your preferred server.
